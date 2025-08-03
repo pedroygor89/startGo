@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head><title>Calculadora</title></head>
+<body>
+<h1>Calculadora de Preços</h1>
+<form method="post">
+<label>Estilo:</label><input type="number" step="0.1" name="style" value="1.0"><br>
+<label>Local:</label><input type="number" step="0.1" name="location" value="1.0"><br>
+<label>Cores:</label><input type="number" step="0.1" name="color" value="1.0"><br>
+<label>Tamanho (cm):</label><input type="number" name="size" value="10"><br>
+<button type="submit">Calcular</button>
+</form>
+{{if .Price}}<p>Preço estimado: {{printf "%.2f" .Price}}</p>{{end}}
+<a href="/">Voltar</a>
+</body>
+</html>
